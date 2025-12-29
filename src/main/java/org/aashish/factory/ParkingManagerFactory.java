@@ -14,13 +14,13 @@ public class ParkingManagerFactory {
         switch (type) {
             case FOUR_WHEELER: {
                 if (fourWheelerParkingManager == null) {
-                    fourWheelerParkingManager = new FourWheelerParkingManager(ParkingLot.fourWheelerSpots);
+                    fourWheelerParkingManager = new FourWheelerParkingManager(ParkingLot.getFourWheelerSpots());
                 }
                 return fourWheelerParkingManager;
             }
             case TWO_WHEELER: {
                 if (twoWheelerParkingManager == null) {
-                    twoWheelerParkingManager = new TwoWheelerParkingManager(ParkingLot.twoWheelerSpots);
+                    twoWheelerParkingManager = new TwoWheelerParkingManager(ParkingLot.getTwoWheelerSpots());
                 }
                 return twoWheelerParkingManager;
             }
