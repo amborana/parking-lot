@@ -1,25 +1,23 @@
 package org.aashish.dto;
 
-import lombok.Getter;
+import org.aashish.service.PricingStrategy;
+import org.aashish.service.SpotAllocationStrategy;
 
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
 
 public class ParkingLot {
-    @Getter
-    private static final List<ParkingSpot> twoWheelerSpots=new CopyOnWriteArrayList<>();
-    @Getter
-    private static final List<ParkingSpot> fourWheelerSpots=new CopyOnWriteArrayList<>();
+    private final List<ParkingFloor> floors;
+    private final SpotAllocationStrategy allocationStrategy;
+    private final PricingStrategy pricingStrategy;
 
-    public static void setTwoWheelerSpots(List<ParkingSpot> twoWheelerSpots){
-        if(twoWheelerSpots.isEmpty()){
-            ParkingLot.twoWheelerSpots.addAll(twoWheelerSpots);
-        }
-    }
-    public static void setFourWheelerSpots(List<ParkingSpot> fourWheelerSpots){
-        if(fourWheelerSpots.isEmpty()){
-            ParkingLot.fourWheelerSpots.addAll(fourWheelerSpots);
-        }
+    public ParkingLot(
+            List<ParkingFloor> floors,
+            SpotAllocationStrategy allocationStrategy,
+            PricingStrategy pricingStrategy
+    ) {
+        this.floors = floors;
+        this.allocationStrategy = allocationStrategy;
+        this.pricingStrategy = pricingStrategy;
     }
 
 }

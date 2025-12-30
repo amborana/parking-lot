@@ -1,17 +1,20 @@
 package org.aashish.dto;
 
-import lombok.Data;
+import org.aashish.service.impl.ParkingSpot;
 
-import java.sql.Timestamp;
-import java.util.UUID;
+import java.time.Instant;
 
-@Data
 public class Ticket {
-    private static UUID uuid;
-    private Timestamp entryTime;
-    private Timestamp exitTime;
-    private ParkingSpot spot;
-    private boolean staff;
-    private int cost;
-    private String message;
+
+    private final Instant entryTime;
+    private final PricingSnapshot pricingSnapshot;
+    private final ParkingSpot spot;
+
+    public Ticket(Instant entryTime,
+                  PricingSnapshot pricingSnapshot,
+                  ParkingSpot spot) {
+        this.entryTime = entryTime;
+        this.pricingSnapshot = pricingSnapshot;
+        this.spot = spot;
+    }
 }

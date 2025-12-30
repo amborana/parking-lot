@@ -1,6 +1,6 @@
 package org.aashish.service;
 
-import org.aashish.dto.ParkingSpot;
+import org.aashish.service.impl.ParkingSpot;
 import org.aashish.dto.Vehicle;
 
 import java.util.Optional;
