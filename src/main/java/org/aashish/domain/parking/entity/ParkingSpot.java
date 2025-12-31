@@ -1,7 +1,7 @@
-package org.aashish.service.impl;
+package org.aashish.domain.parking.entity;
 
 import lombok.Data;
-import org.aashish.dto.Vehicle;
+import org.aashish.domain.parking.valueobject.Vehicle;
 
 import java.util.concurrent.locks.ReentrantLock;
 

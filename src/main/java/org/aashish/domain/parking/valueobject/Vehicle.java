@@ -1,4 +1,4 @@
-package org.aashish.dto;
+package org.aashish.domain.parking.valueobject;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

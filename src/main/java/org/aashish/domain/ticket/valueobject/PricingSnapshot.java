@@ -1,4 +1,4 @@
-package org.aashish.dto;
+package org.aashish.domain.ticket.valueobject;
 
 import java.math.BigDecimal;
 
